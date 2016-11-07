@@ -10,6 +10,8 @@ Router.map(function () {
   this.route('sign-in');
   this.route('change-password');
   this.route('users');
+  this.route('bikes');
+  this.route('bike', { path: '/bikes/:bike_id' });
 });
 
 export default Router;
