@@ -1,9 +1,14 @@
-{{my-bike bike=model toggleBikeDone='toggleBikeDone'}}
+{{my-bike bike=model delete='deleteBike' edit='edit'}}
 
+
+<!-- <ul>
+{{#each model as |bike|}}
+  {{bikes/my-bike bike=bike delete='deleteBike'}}
+{{/each}}
+</ul> -->
 
 <!-- {{bikes bike=model
              edit='edit'
              togglePartDone='togglePartDone'
              deletePart='deletePart'
              createPart='createPart'}} -->
-<!-- should i be using bike or part??? -->

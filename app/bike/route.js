@@ -1,27 +1,18 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model (params) {
-    return this.get('store').findRecord('bike', params.bike_id);
+  model () {
+    return this.get('store').findAll('bike');
   },
 
   actions: {
-    edit (bike) {
-      this.transitionTo('bike.edit', bike);
-    },
-
-    // toggleItemDone (part) {
-    //   part.toggleProperty('done');
-    //   part.save();
-    // },
-    //
-    // deleteItem (part) {
-    //   part.destroyRecord();
-    // },
-    //
-    // createItem (newPart) {
-    //   let part = this.get('store').createRecord('part', newPart);
-    //   part.save();
-    // },
+    deleteBike (data) {
+      let bike = data;
+      console.log('getting to destroyRecord');
+      console.log(bike);
+      bike.destroyRecord();
+      this.transitionTo('bikes');
   },
+},
+
 });

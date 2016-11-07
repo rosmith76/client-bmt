@@ -2,13 +2,7 @@
 
 <ul>
 {{#each model as |bike|}}
-  <li>{{#link-to 'bike' bike}}{{bike.name}}{{/link-to}}</li>
+  <li>{{#link-to 'bike' bike}}{{bike.name}}{{/link-to}}
+  </li>
 {{/each}}
 </ul>
-
-<!-- <h2>ListR</h2>
-{{#each model as |list|}}
-  {{#link-to 'list' list}}
-    {{listr-list/card title=list.title}}
-  {{/link-to}}
-{{/each}} -->
