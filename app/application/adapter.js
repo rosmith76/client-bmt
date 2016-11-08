@@ -1,4 +1,5 @@
-import ENV from 'client-bmt/config/environment';
+// import ENV from 'client-bmt/config/environment';
+import ENV from 'murmuring-lake-34682/config/environment';
 import ActiveModelAdapter from 'active-model-adapter';
 
 import Ember from 'ember';
