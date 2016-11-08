@@ -1,7 +1,7 @@
 import Ember from 'ember';
 import AjaxService from 'ember-ajax/services/ajax';
-import ENV from 'murmuring-lake-34682/config/environment';
-// import ENV from 'client-bmt/config/environment';
+// import ENV from 'murmuring-lake-34682/config/environment';
+import ENV from 'client-bmt/config/environment';
 
 export default AjaxService.extend({
   host: ENV.apiHost,
