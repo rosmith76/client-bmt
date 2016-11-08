@@ -8,10 +8,11 @@ export default Ember.Route.extend({
   actions: {
     deleteBike (data) {
       let bike = data;
-      console.log('getting to destroyRecord');
-      console.log(bike);
-      bike.destroyRecord();
-      this.transitionTo('bikes');
+
+      return bike.destroyRecord()
+            .then(() => this.transitionTo('bikes'))
+            .catch((error) => console.error(error));
+
   },
 },
 
