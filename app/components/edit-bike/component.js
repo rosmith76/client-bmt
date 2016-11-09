@@ -5,10 +5,8 @@ export default Ember.Component.extend({
   bike: {},
   actions: {
     update () {
-      let editBike = this.get('bike');
       console.log('edit-bike component');
-      console.log(editBike);
-      this.sendAction('update', editBike);
+      this.sendAction('update', this.get('bike'));
     },
     reset() {
       this.set('bike', null);

@@ -5,10 +5,8 @@ export default Ember.Route.extend({
     return this.get('store').findRecord('bike', params.bike_id);
   },
   actions: {
-    update (params) {
-      let bike = this.get('store').updateRecord('bike', params.bike_id);
-        console.log(bike);
-        debugger;
+    editBike (bike) {
+      
       return bike.save()
       .then(() => this.transitionTo('bikes'))
       .catch((err) => {
