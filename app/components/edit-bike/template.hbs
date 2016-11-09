@@ -1,0 +1,39 @@
+<form {{action 'update' on='submit'}}>
+  <h2>Bike Name: {{input type="text" value=bike.name}}</h2>
+  <h4>Date of Purchase: {{input type="date" value=bike.date_of_purchase}}</h4>
+  <h4>Make: {{input type="text" value=bike.make}}</h4>
+  <h4>Frame: {{input type="text" value=bike.frame}}</h4>
+  <h4>Fork: {{input type="text" value=bike.fork}}</h4>
+  <h4>Fork Last Serivced: {{input type="date" value=bike.fork_service}}</h4>
+  <h4>Brakes: {{input type="text" value=bike.brakes}}</h4>
+  <h4>Brakes Last Bled: {{input type="date" value=bike.brake_bleed}}</h4>
+  <h4>Brake Pads Last Replaced: {{input type="date" value=bike.pad_replaced}}</h4>
+  <h4>Brake Rotors: {{input type="text" value=bike.rotors}}</h4>
+  <h4>Wheels: {{input type="text" value=bike.wheels}}</h4>
+  <h4>Tires: {{input type="text" value=bike.tires}}</h4>
+  <h4>Tubelss Sealant Last Added: {{input type="date" value=bike.sealant}}</h4>
+  <h4>Shifters: {{input type="text" value=bike.shifters}}</h4>
+  <h4>Front Derailleur: {{input type="text" value=bike.front_derailleur}}</h4>
+  <h4>Rear Derailleur: {{input type="text" value=bike.rear_derailleur}}</h4>
+  <h4>Cassette: {{input type="text" value=bike.cassette}}</h4>
+  <h4>Chain: {{input type="text" value=bike.chain}}</h4>
+  <h4>Cranks: {{input type="text" value=bike.cranks}}</h4>
+  <h4>Bottom Bracket: {{input type="text" value=bike.bottom_bracket}}</h4>
+  <h4>Saddle: {{input type="text" value=bike.saddle}}</h4>
+  <h4>Seatpost: {{input type="text" value=bike.seatpost}}</h4>
+  <h4>Stem: {{input type="text" value=bike.stem}}</h4>
+  <h4>Handlebars: {{input type="text" value=bike.handlebars}}</h4>
+  <h4>Grips: {{input type="text" value=bike.grips}}</h4>
+  <h4>Headset: {{input type="text" value=bike.headset}}</h4>
+  <h5>Notes: {{input type="text" value=bike.notes}}</h5>
+   <button type='submit' class='btn btn-default'>
+     Update Bike
+   </button>
+
+   <button class='btn btn-default' {{action 'reset'}}>
+     Cancel
+   </button>
+   <button class='btn btn-default'>
+     {{#link-to 'bikes'}}Back to bikes{{/link-to}}
+   </button>
+</form>

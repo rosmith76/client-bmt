@@ -11,6 +11,7 @@
       <ul class="nav navbar-nav navbar-right">
         {{#if isAuthenticated}}
         <li>{{#link-to 'bikes'}}Go to my bikes{{/link-to}}</li>
+        <li>{{#link-to 'createbike'}}Create a new bike{{/link-to}}</li>
         <li>{{#link-to "change-password"}}Change Password{{/link-to}}</li>
         <li><a href="#" {{action "signOut"}}>Sign Out</a></li>
         {{else}}
@@ -26,7 +27,7 @@
 <p> Once you create an account, you can create a new bike. Each bike you create can
   be stock or custom. With each bike you create you can keep track of thinks like fork service,
   brake bleeds, and tire sealant. You can also use the tracker to build your dream bike. Start with
-  the frame, and go from there. 
+  the frame, and go from there.
 </p>
 
 {{#each flashMessages.queue as |flash|}}

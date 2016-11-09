@@ -1,0 +1,37 @@
+// basic colors
+$white: #fff;
+$black: #000;
+
+// transparent colors
+$transparent-black: rgba($black, .5);
+
+// neutrals
+$darkgray: #222e25;
+$lightgray: #97948a;
+$tan: #f7f7be;
+$white: #fafafa;
+
+// main color palette
+$forestgreen: #2e4600;
+$grass: #486b00;
+$lime: #a2c523;
+$earth: #7d4427;
+
+// alternate color palette - "hazy grays"
+// $blue-green: #2c4a52;
+// $waterway: #537072;
+// $haze: #8e9b97;
+// $smog: #f4ebdb;
+
+
+@function shade($color, $percentage) {
+  @return mix($black, $color, $percentage);
+}
+
+@function tint($color, $percentage) {
+  @return mix($white, $color, $percentage);
+}
+
+
+$light-green: tint($forestgreen, 50%);
+$earth-shade: shade($earth, 20%);

@@ -12,6 +12,8 @@ Router.map(function () {
   this.route('users');
   this.route('bikes');
   this.route('bike', { path: '/bikes/:bike_id' });
+  this.route('createbike');
+  this.route('editbike', { path: '/bikes/:bike_id/edit' });
 });
 
 export default Router;
