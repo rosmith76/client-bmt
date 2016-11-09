@@ -26,6 +26,12 @@
 <h4>Grips: {{bike.grips}}</h4>
 <h4>Headset: {{bike.headset}}</h4>
 <h5>Notes: {{bike.notes}}</h5>
-<button class="btn btn-xs btn-fancy" {{action 'delete'}}>
+<button class="btn btn-default" {{action 'delete'}}>
   Delete
+</button>
+<button class="btn btn-default">
+  {{#link-to 'editbike' bike}}Edit Bike{{/link-to}}
+</button>
+<button class='btn btn-default'>
+  {{#link-to 'bikes'}}Back to bikes{{/link-to}}
 </button>

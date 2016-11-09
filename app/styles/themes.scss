@@ -1,0 +1,134 @@
+@import 'typography';
+@import 'colors';
+
+$unit: 75px;
+$min-width: 300px;
+$bar-height: 30px;
+$link-padding: ($bar-height - $font-size) / 2;
+$form-element-height: 40px;
+
+
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $forestgreen;
+  color: $lime;
+  height: 100%;
+  margin: 0;
+  min-width: $min-width;
+  padding: 0;
+  position: relative;
+}
+
+h2,
+h5,
+h4, {
+  color: $lime;
+}
+
+h1,
+h2,
+h3,
+h5,
+p,
+.public-display,
+.auth-forms,
+.container {
+  margin-left: 5%;
+}
+
+.nav-wrapper {
+  background: $earth;
+  min-height: 30%;
+  padding: $bar-height 0;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+}
+
+
+.btn-default {
+  align-self: left;
+  background: $white;
+  color: $black;
+  display: block;
+  margin: 5px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $lime;
+    color: $black;
+    text-decoration: none;
+    }
+}
+
+nav {
+  background: $white;
+  min-width: $min-width;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  a {
+    background: $white;
+    display: block;
+    float: right;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $forestgreen;
+      color: $white;
+      text-decoration: none;
+    }
+
+    }
+  }
+
+div {
+  height: 30px;
+  padding: 8px 15px;
+  }
+
+form {
+  margin: 0 auto;
+  width: auto;
+}
+
+input {
+  border: 1px solid $white;
+  border-radius: 4px;
+  // background-color: $white;
+  box-shadow: none;
+  color: $black;
+  font-size: 1.2em;
+  height: $form-element-height;
+  // margin: 20px;
+  width: 200px;
+}
+
+label {
+  display: none;
+}
+
+button {
+  // background-color: $latte;
+  border: 0;
+  box-shadow: none;
+  height: $form-element-height;
+  width: 200px;
+}
+
+
+.border-top {
+  border-top: 1px solid;
+  clear: both;
+  margin: 10px;
+  padding: 15px 0;
+}

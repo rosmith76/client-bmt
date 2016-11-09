@@ -1,8 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model () {
-    return this.get('store').findAll('bike');
+  model (params) {
+    return this.get('store').findRecord('bike', params.bike_id);
   },
 
   actions: {
@@ -12,8 +12,13 @@ export default Ember.Route.extend({
       return bike.destroyRecord()
             .then(() => this.transitionTo('bikes'))
             .catch((error) => console.error(error));
-
-  },
 },
+    updateBike (params) {
+      let bike = this.get('store').findRecord('bike', params.bike_id);
 
+      return bike.updateRecord()
+        .then(() => this.transitionTo('bikes'))
+        .catch((error) => console.error(error));
+  }
+ }
 });
