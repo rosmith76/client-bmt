@@ -38,7 +38,7 @@ module.exports = function (environment) {
 
   if (environment === 'test') {
     // Testem prefers this...
-    ENV.rootUrl = '/';
+    ENV.rootUrl = '/client-bmt';
     ENV.locationType = 'none';
 
     // keep test console output quieter
@@ -49,7 +49,7 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
-    ENV.baseURL = '/';
+    ENV.rootURL = '/client-bmt';
     ENV.locationType = 'hash';
     ENV.apiHost = 'https://murmuring-lake-34682.herokuapp.com';
   }
