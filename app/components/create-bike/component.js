@@ -7,9 +7,10 @@ export default Ember.Component.extend({
     create () {
       let newBike = this.get('bike');
       this.sendAction('create', newBike);
+      this.set('bike', {});
     },
     reset() {
-      this.set('bike', null);
+      this.set('bike', {});
     },
   }
 });
